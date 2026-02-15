@@ -10,6 +10,8 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
+    --color-pink-400: oklch(71.8% 0.202 349.761);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
     --radius-2xl: 1rem;
@@ -166,14 +168,41 @@
   }
 }
 @layer utilities {
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
   .sticky {
     position: sticky;
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
   .flex {
     display: flex;
+  }
+  .table {
+    display: table;
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
+  }
+  .h-48 {
+    height: calc(var(--spacing) * 48);
+  }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
+  .h-\[64px\] {
+    height: 64px;
   }
   .h-\[calc\(100vh-64px\)\] {
     height: calc(100vh - 64px);
@@ -181,8 +210,17 @@
   .h-max {
     height: max-content;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .grow {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -215,6 +253,12 @@
   .bg-amber-300 {
     background-color: var(--color-amber-300);
   }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-pink-400 {
+    background-color: var(--color-pink-400);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -236,8 +280,20 @@
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
 }
 @property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -246,6 +302,7 @@
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
+      --tw-outline-style: solid;
     }
   }
 }
