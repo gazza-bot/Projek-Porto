@@ -5,7 +5,7 @@
 @theme {
   --font-lora: "Lora", sans-serif;
   --font-poppins: "Poppins", sans-serif;
-
+  --color-biru-donker: #003fd4;
   --color-shuttle-gray-50: #f9fafb;
   --color-shuttle-gray-100: #f2f4f7;
   --color-shuttle-gray-200: #e4e7ec;
