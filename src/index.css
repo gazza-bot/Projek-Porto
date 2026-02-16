@@ -43,10 +43,48 @@
   --color-ecru-white-950: #322216;
 }
 
-.reveal{
-    @apply opacity-0 translate-y-10;
+.reveal {
+  @apply opacity-0 translate-y-10 transition-all duration-1000;
 }
 
-.reveal.show{
-    @apply opacity-100 translate-y-0;
+.reveal.show {
+  @apply opacity-100 translate-y-0;
+}
+
+.navbar {
+  @apply sticky top-0 h-max bg-linear-to-r from-shuttle-gray-800 from-80% via-shuttle-gray-700 via-90% to-shuttle-gray-600 to-95% z-20;
+}
+
+.li-nav {
+  @apply font-poppins text-ecru-white-200 pl-2 pr-2 transition duration-300 ease-in-out hover:border-0 hover:bg-tussock-300 hover:text-ecru-white-50 rounded-3xl;
+}
+
+.font-gallery {
+  @apply font-poppins font-bold text-6xl pt-10 pl-10 bg-linear-to-b from-tussock-400 from-60% via-tussock-300 via-85% to-ecru-white-200 bg-clip-text text-transparent;
+}
+
+.grid-gallery {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 p-10;
+}
+
+.gallery-card {
+  @apply relative border border-white/10 rounded-2xl flex flex-col inset-shadow-2xs inset-shadow-ecru-white-100 transition duration-200 ease-in-out hover:translate-y-1 hover:scale-105 grayscale hover:grayscale-0;
+}
+
+.gallery-text {
+  @apply absolute bottom-4 left-4 text-2xl text-ecru-white-200 transition duration-200 opacity-0 group-hover:opacity-100 z-20;
+}
+
+.footer-h1 {
+  @apply font-poppins font-bold text-2xl pb-10 bg-linear-to-b from-tussock-400 from-70% via-tussock-300 via-85% to-tussock-200 to-95% bg-clip-text text-transparent;
+}
+
+.svg-set {
+    @apply w-10 h-10 text-white hover:text-tussock-400;
+}
+
+.svg-rounded {
+  @apply inline-flex items-center justify-center
+         rounded-full size-20
+         inset-shadow-2xs inset-shadow-tussock-200;
 }

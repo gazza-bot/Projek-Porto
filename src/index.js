@@ -6,7 +6,7 @@ const observer = new IntersectionObserver((entries)=>{
         }
     })
 },{
-    threshold: 0.3
+    threshold: 0.5
 })
 
 document.querySelectorAll(".reveal").forEach(el => {
