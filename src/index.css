@@ -1,1 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-lora: "Lora", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-shuttle-gray-50: #f9fafb;
+  --color-shuttle-gray-100: #f2f4f7;
+  --color-shuttle-gray-200: #e4e7ec;
+  --color-shuttle-gray-300: #cfd5dd;
+  --color-shuttle-gray-400: #98a2b3;
+  --color-shuttle-gray-500: #5f687a;
+  --color-shuttle-gray-600: #465468;
+  --color-shuttle-gray-700: #324056;
+  --color-shuttle-gray-800: #1a283c;
+  --color-shuttle-gray-900: #0d162b;
+  --color-shuttle-gray-950: #000615;
+
+  --color-tussock-50: #f9f6ed;
+  --color-tussock-100: #f0e9d1;
+  --color-tussock-200: #e2d3a6;
+  --color-tussock-300: #d2b572; /* ini emas */
+  --color-tussock-400: #c7a156;
+  --color-tussock-500: #b4873e;
+  --color-tussock-600: #9b6b33;
+  --color-tussock-700: #7c502c;
+  --color-tussock-800: #69422a;
+  --color-tussock-900: #5a3929;
+  --color-tussock-950: #341e14;
+
+  --color-ecru-white-50: #f5f3e7;
+  --color-ecru-white-100: #eeead7;
+  --color-ecru-white-200: #dbd5ac;
+  --color-ecru-white-300: #c9bc80;
+  --color-ecru-white-400: #bca863;
+  --color-ecru-white-500: #b09150;
+  --color-ecru-white-600: #9b7844;
+  --color-ecru-white-700: #825e3b;
+  --color-ecru-white-800: #6b4c35;
+  --color-ecru-white-900: #59402e;
+  --color-ecru-white-950: #322216;
+}
