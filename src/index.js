@@ -22,3 +22,4 @@ const mobile_menu = document.getElementById("menuMobile");
 toggleMenu.addEventListener("click", () => {
   mobile_menu.classList.toggle("hidden");
 });
+    
