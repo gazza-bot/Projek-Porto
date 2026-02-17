@@ -411,8 +411,14 @@
   .bg-\[url\(\'assets\/bg-4\.jpg\'\)\] {
     background-image: url('assets/bg-4.jpg');
   }
+  .bg-\[url\(\'assets\/bg-5\.JPG\'\)\] {
+    background-image: url('assets/bg-5.JPG');
+  }
   .bg-\[url\(\'assets\/bg-5\.jpg\'\)\] {
     background-image: url('assets/bg-5.jpg');
+  }
+  .bg-\[url\(\'assets\/bg-6\.JPG\'\)\] {
+    background-image: url('assets/bg-6.JPG');
   }
   .bg-\[url\(\'assets\/bg-6\.jpg\'\)\] {
     background-image: url('assets/bg-6.jpg');
