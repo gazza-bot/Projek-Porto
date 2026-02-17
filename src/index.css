@@ -72,11 +72,11 @@
 }
 
 .gallery-text {
-  @apply absolute bottom-4 left-4 text-xl md:text-2xl font-poppins text-tussock-400 text-shadow-2xs text-shadow-tussock-100 transition duration-200 opacity-0 group-hover:opacity-100 z-20;
+  @apply absolute bottom-4 left-4 text-xl md:text-2xl font-poppins text-tussock-400 text-shadow-2xs text-shadow-tussock-100 transition duration-200 sm:opacity-0 sm:group-hover:opacity-100 z-20;
 }
 
 .gallery-shadow {
-  @apply absolute inset-0 z-5 bg-linear-to-b from-black/0 via-black/50 to-black/85 opacity-0 transition duration-200 -translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 border-0 rounded-2xl;
+  @apply absolute inset-0 z-5 bg-linear-to-b from-black/0 via-black/50 to-black/85 transition duration-200 sm:-translate-y-10 sm:opacity-0 sm:group-hover:translate-y-0 group-hover:opacity-100 border-0 rounded-2xl;
 }
 
 .footer-h1 {
