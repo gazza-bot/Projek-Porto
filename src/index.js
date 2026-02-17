@@ -12,3 +12,10 @@ const observer = new IntersectionObserver((entries)=>{
 document.querySelectorAll(".reveal").forEach(el => {
     observer.observe(el)
 })
+
+const toggleMenu = document.getElementById("toggleMenu")
+const mobile_menu = document.getElementById("menuMobile")
+
+toggleMenu.addEventListener('click',()=>{
+    mobile_menu.classList.toggle('hidden')
+})

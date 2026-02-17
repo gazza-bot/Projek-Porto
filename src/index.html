@@ -11,20 +11,44 @@
 <body class="scroll-smooth">
     <!-- NAVBAR SECTION -->
     <section id="navbar" class="navbar">
-        <div class="flex flex-row justify-between p-5 items-center">
+        <nav class="flex flex-row justify-between h-16 items-center px-3">
             <div class="flex items items-center">
                 <img class="size-10" src="assets/logo-angkatan.png" alt="">
-                <h1 class="font-poppins text-ecru-white-200"><span class="text-tussock-400">Eternity</span> Generation
+                <h1 class="text-[10px] md:text-[20px] font-poppins text-ecru-white-200"><span
+                        class="text-tussock-400">Eternity</span> Generation
                 </h1>
             </div>
             <!-- bagian fitur - fitur navbar -->
-            <div id="ul_nav" class="">
+            <div id="ul_nav" class="hidden md:block">
                 <ul class="flex flex-row gap-20">
                     <li id="li_nav" class="li-nav"><a href="#hero">Home</a></li>
                     <li id="li_nav" class="li-nav"><a href="#Gallery">Gallery</a></li>
                     <li id="li_nav" class="li-nav"><a href="#footer">Social Media</a></li>
                 </ul>
             </div>
+
+            <button id="toggleMenu" class="block md:hidden">
+                <svg class="text-tussock-400 size-10" fill="currentColor" viewBox="0 0 24 24" id="menu" data-name="Flat Line"
+                    xmlns="http://www.w3.org/2000/svg" class="icon flat-line">
+                    <path id="primary" d="M3,12H21M9,18H21M3,6H15"
+                        style="fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+
+        <div>
+            <ul id="menuMobile" class="hidden">
+                <li id=""
+                    class="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200"><a
+                        href="#hero">Home</a></li>
+                <li id=""
+                    class="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200"><a
+                        href="#Gallery">Gallery</a></li>
+                <li id=""
+                    class="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200"><a
+                        href="#footer">Social Media</a></li>
+            </ul>
         </div>
     </section>
 
@@ -51,16 +75,16 @@
         <!-- content -->
         <div class="relative z-10 flex flex-col gap-3 items-center reveal">
             <p
-                class="text-3xl text-tussock-300 font-poppins border border-white/10 rounded-2xl pr-3 pl-3 bg-shuttle-gray-500/50 backdrop-blur-lg">
+                class="text-xl md:text-2xl sm:text-3xl text-tussock-300 font-poppins border border-white/10 rounded-full px-3 bg-shuttle-gray-500/50 backdrop-blur-lg">
                 Class of 2025</p>
-            <img class="size-1/2" src="assets/logo-angkatan.png" alt="">
+            <img class="size-48 sm:size-56 md:size-64" src="assets/logo-angkatan.png" alt="">
             <h1
-                class="font-poppins font-bold text-5xl bg-linear-to-r from-tussock-300 via-tussock-200 to-tussock-300 bg-clip-text text-transparent text-shadow-1xs text-shadow-tussock-200 drop-shadow-black">
+                class="font-poppins font-bold text-3xl md:text-5xl bg-linear-to-r from-tussock-300 via-tussock-200 to-tussock-300 bg-clip-text text-transparent text-shadow-1xs text-shadow-tussock-200 drop-shadow-black">
                 ETERNITY GENERATION</h1>
-            <h1 class="font-lora font-extralight text-4xl text-ecru-white-200">Authentic Gray</h1>
-            <p class="font-lora text-ecru-white-200 text-2xl">Together, Forever , Wherever</p>
+            <h1 class="font-lora font-extralight text-2xl md:text-4xl text-ecru-white-200">Authentic Gray</h1>
+            <p class="font-lora text-ecru-white-200 text-xl md:text-2xl">Together, Forever , Wherever</p>
             <a href="#Gallery"
-                class="border border-white/10 rounded-2xl pl-2 pr-2 bg-shuttle-gray-500/50 backdrop-blur-sm font-poppins text-tussock-300 text-2xl">Our
+                class="border border-white/10 rounded-2xl pl-2 pr-2 bg-shuttle-gray-500/50 backdrop-blur-sm font-poppins text-tussock-300 text-xl md:text-2xl">Our
                 Big Moments -></a>
         </div>
     </main>
@@ -70,7 +94,7 @@
         class="relative h-max bg-linear-to-t from-shuttle-gray-700 from-80% via-shuttle-gray-600 via-90% to-shuttle-gray-500 to-95%">
         <h1 class="reveal font-gallery">Gallery</h1>
         <p class="reveal font-popins font-medium pl-10 text-2xl text-ecru-white-200">Living Up Our Memories</p>
-        <div class="grid-gallery">
+        <div class="reveal grid-gallery">
             <div class="gallery-card group bg-[url('assets/bg-1.jpg')] bg-cover bg-center aspect-square">
                 <h1 class="gallery-text">Lorem Ipsum</h1>
             </div>
@@ -93,22 +117,22 @@
     </section>
 
     <!-- section footer -->
-    <section id="footer" class="flex flex-col items-center justify-center h-max bg-shuttle-gray-800">
+    <section id="footer"
+        class="flex flex-col items-center justify-center h-max bg-linear-to-b from-shuttle-gray-800 from-80% to-shuttle-gray-900">
         <!-- Logo dan Kepanjangan Nama angkatan -->
-        <div class="reveal flex flex-col p-10 items-center">
-            <img class="size-72 " src="assets/logo-angkatan.png" alt="">
-            <h1 class="footer-h1">ETERNITY GENERATION</h1>
-            <h1
-                class="footer-h1">
+        <div class="flex flex-col p-10 items-center">
+            <img class="reveal size-72 " src="assets/logo-angkatan.png" alt="">
+            <h1 class="reveal footer-h1">ETERNITY GENERATION</h1>
+            <h1 class="reveal footer-h1">
                 Enhancing National Integrity, Radiating Youthfulity</h1>
-            <p class="text-1xl text-tussock-300 opacity-50 font-lora font-light">Est. MMXXXV</p>
+            <p class="reveal text-1xl text-tussock-300 opacity-50 font-lora font-light">Est. MMXXXV</p>
         </div>
         <!-- Social Medias -->
-        <div class="reveal flex flex-col p-10">
-            <h1 class="footer-h1">Get To Know Us!!!</h1>
-            <div class="flex flex-row gap-15">
+        <div class="flex flex-col p-10">
+            <h1 class="reveal footer-h1">Get To Know Us!!!</h1>
+            <div class="reveal flex flex-row gap-15">
                 <!-- Instagram -->
-                <a class="svg-rounded" href="https://www.instagram.com/eternitygeneration_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <a class="svg-rounded" href="https://www.instagram.com/eternitygeneration_">
                     <svg class="svg-set" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M11 3.5H12M4.5 0.5H10.5C12.7091 0.5 14.5 2.29086 14.5 4.5V10.5C14.5 12.7091 12.7091 14.5 10.5 14.5H4.5C2.29086 14.5 0.5 12.7091 0.5 10.5V4.5C0.5 2.29086 2.29086 0.5 4.5 0.5ZM7.5 10.5C5.84315 10.5 4.5 9.15685 4.5 7.5C4.5 5.84315 5.84315 4.5 7.5 4.5C9.15685 4.5 10.5 5.84315 10.5 7.5C10.5 9.15685 9.15685 10.5 7.5 10.5Z"
@@ -116,7 +140,7 @@
                     </svg>
                 </a>
                 <!-- YT -->
-                <a class="svg-rounded" href="https://youtube.com/@mediasepuluh?si=LOz1z50K-bnLes7s">
+                <a class="svg-rounded" href="https://youtube.com/@mediasepuluh">
                     <svg class="svg-set" fill="currentColor" viewBox="-2 -5 24 24" xmlns="http://www.w3.org/2000/svg"
                         preserveAspectRatio="xMinYMin" class="jam jam-youtube">
                         <path
@@ -130,4 +154,5 @@
     </section>
 </body>
 <script src="index.js"></script>
+
 </html>

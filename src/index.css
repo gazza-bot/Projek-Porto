@@ -68,7 +68,7 @@
 }
 
 .gallery-card {
-  @apply relative border border-white/10 rounded-2xl flex flex-col inset-shadow-2xs inset-shadow-ecru-white-100 transition duration-200 ease-in-out hover:translate-y-1 hover:scale-105 grayscale hover:grayscale-0;
+  @apply relative border border-white/10 rounded-2xl flex flex-col inset-shadow-2xs inset-shadow-ecru-white-100 transition duration-200 ease-in-out hover:translate-y-1 hover:scale-105 md:grayscale hover:grayscale-0;
 }
 
 .gallery-text {
@@ -76,7 +76,7 @@
 }
 
 .footer-h1 {
-  @apply font-poppins font-bold text-2xl pb-10 bg-linear-to-b from-tussock-400 from-70% via-tussock-300 via-85% to-tussock-200 to-95% bg-clip-text text-transparent;
+  @apply text-center font-poppins font-bold text-xl md:text-2xl pb-10 bg-linear-to-b from-tussock-400 from-70% via-tussock-300 via-85% to-tussock-200 to-95% bg-clip-text text-transparent;
 }
 
 .svg-set {
@@ -86,5 +86,5 @@
 .svg-rounded {
   @apply inline-flex items-center justify-center
          rounded-full size-20
-         inset-shadow-2xs inset-shadow-tussock-200;
+         inset-shadow-2xs inset-shadow-tussock-200 bg-shuttle-gray-700;
 }
