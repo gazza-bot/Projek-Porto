@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-lora: "Lora", sans-serif;
   --font-poppins: "Poppins", sans-serif;
+  --font-cinzel: "Cinzel", sans-serif;
   --color-biru-donker: #003fd4;
   --color-shuttle-gray-50: #f9fafb;
   --color-shuttle-gray-100: #f2f4f7;
@@ -72,7 +74,7 @@
 }
 
 .gallery-text {
-  @apply absolute bottom-4 left-4 text-xl md:text-2xl font-poppins text-tussock-400 text-shadow-2xs text-shadow-tussock-100 transition duration-200 sm:opacity-0 sm:group-hover:opacity-100 z-20;
+  @apply absolute bottom-4 left-4 text-xl md:text-2xl font-cinzel text-tussock-400 text-shadow-2xs text-shadow-tussock-100 transition duration-200 sm:opacity-0 sm:group-hover:opacity-100 z-20;
 }
 
 .gallery-shadow {
@@ -84,7 +86,7 @@
 }
 
 .svg-set {
-    @apply w-10 h-10 text-white hover:text-tussock-400;
+  @apply w-10 h-10 text-white hover:text-tussock-400;
 }
 
 .svg-rounded {

@@ -1,6 +1,7 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -41,6 +42,7 @@
     --default-mono-font-family: var(--font-mono);
     --font-lora: "Lora", sans-serif;
     --font-poppins: "Poppins", sans-serif;
+    --font-cinzel: "Cinzel", sans-serif;
     --color-shuttle-gray-500: #5f687a;
     --color-shuttle-gray-600: #465468;
     --color-shuttle-gray-700: #324056;
@@ -526,6 +528,9 @@
   .text-center {
     text-align: center;
   }
+  .font-cinzel {
+    font-family: var(--font-cinzel);
+  }
   .font-lora {
     font-family: var(--font-lora);
   }
@@ -879,7 +884,7 @@
   bottom: calc(var(--spacing) * 4);
   left: calc(var(--spacing) * 4);
   z-index: 20;
-  font-family: var(--font-poppins);
+  font-family: var(--font-cinzel);
   font-size: var(--text-xl);
   line-height: var(--tw-leading, var(--text-xl--line-height));
   color: var(--color-tussock-400);
