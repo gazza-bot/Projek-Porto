@@ -7,7 +7,6 @@
   --font-lora: "Lora", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-cinzel: "Cinzel", sans-serif;
-  --color-biru-donker: #003fd4;
   --color-shuttle-gray-50: #f9fafb;
   --color-shuttle-gray-100: #f2f4f7;
   --color-shuttle-gray-200: #e4e7ec;
@@ -70,7 +69,7 @@
 }
 
 .gallery-card {
-  @apply relative border border-white/10 rounded-2xl flex flex-col transition duration-200 ease-in-out hover:translate-y-1 hover:scale-105 md:grayscale hover:grayscale-0;
+  @apply relative border border-white/10 rounded-2xl flex flex-col transition duration-200 ease-in-out hover:translate-y-1 hover:scale-105 md:grayscale hover:grayscale-0 overflow-hidden;
 }
 
 .gallery-text {
@@ -78,11 +77,11 @@
 }
 
 .gallery-shadow {
-  @apply absolute inset-0 z-5 bg-linear-to-b from-black/0 via-black/50 to-black/85 transition duration-200 sm:-translate-y-10 sm:opacity-0 sm:group-hover:translate-y-0 group-hover:opacity-100 border-0 rounded-2xl;
+  @apply absolute size-full inset-0 z-5 bg-linear-to-b from-black/0 via-black/50 to-black/85 transition duration-200 sm:-translate-y-10 sm:opacity-0 sm:group-hover:translate-y-0 group-hover:opacity-100;
 }
 
 .footer-h1 {
-  @apply text-center font-poppins font-bold text-xl md:text-2xl pb-10 bg-linear-to-b from-tussock-400 from-70% via-tussock-300 via-85% to-tussock-200 to-95% bg-clip-text text-transparent;
+  @apply text-center font-cinzel font-bold text-xl md:text-2xl pb-10 bg-linear-to-b from-tussock-400 from-70% via-tussock-300 via-85% to-tussock-200 to-95% bg-clip-text text-transparent;
 }
 
 .svg-set {
