@@ -65,7 +65,7 @@
 }
 
 .font-gallery {
-  @apply font-poppins font-bold text-4xl md:text-6xl pt-10 pl-10 bg-linear-to-b from-tussock-400 from-60% via-tussock-300 via-85% to-ecru-white-200 bg-clip-text text-transparent;
+  @apply font-poppins font-bold text-6xl pt-10 pl-10 bg-linear-to-b from-tussock-400 from-60% via-tussock-300 via-85% to-ecru-white-200 bg-clip-text text-transparent;
 }
 
 .grid-gallery {
