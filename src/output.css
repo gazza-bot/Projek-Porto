@@ -516,6 +516,9 @@
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
+  }
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
   }
@@ -696,6 +699,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .md\:pt-0 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 0);
+    }
+  }
   .md\:text-2xl {
     @media (width >= 48rem) {
       font-size: var(--text-2xl);
@@ -741,10 +749,12 @@
   opacity: 100%;
 }
 .navbar {
-  position: sticky;
+  position: fixed;
   top: calc(var(--spacing) * 0);
-  z-index: 20;
+  left: calc(var(--spacing) * 0);
+  z-index: 50;
   height: max-content;
+  width: 100%;
   --tw-gradient-position: to right;
   @supports (background-image: linear-gradient(in lab, red, red)) {
     --tw-gradient-position: to right in oklab;
@@ -789,6 +799,13 @@
       color: var(--color-ecru-white-50);
     }
   }
+}
+.menu-mobile {
+  position: absolute;
+  top: 100%;
+  left: calc(var(--spacing) * 0);
+  z-index: 50;
+  width: 100%;
 }
 .font-gallery {
   --tw-gradient-position: to bottom;

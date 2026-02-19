@@ -53,11 +53,15 @@
 }
 
 .navbar {
-  @apply sticky top-0 h-max bg-linear-to-r from-shuttle-gray-800 from-80% via-shuttle-gray-700 via-90% to-shuttle-gray-600 to-95% z-20;
+  @apply fixed top-0 left-0 w-full h-max bg-linear-to-r from-shuttle-gray-800 from-80% via-shuttle-gray-700 via-90% to-shuttle-gray-600 to-95% z-50;
 }
 
 .li-nav {
   @apply font-poppins text-ecru-white-200 pl-2 pr-2 transition duration-300 ease-in-out hover:border-0 hover:bg-tussock-300 hover:text-ecru-white-50 rounded-3xl;
+}
+
+.menu-mobile {
+  @apply absolute top-full left-0 w-full z-50
 }
 
 .font-gallery {
