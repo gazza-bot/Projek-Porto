@@ -61,7 +61,7 @@
 }
 
 .menu-mobile {
-  @apply absolute top-full left-0 w-full z-50
+  @apply absolute top-full left-0 w-full z-50 backdrop-blur-md bg-black/40 border-b border-ecru-white-100/20 shadow-2xl;
 }
 
 .font-gallery {

@@ -2,13 +2,14 @@ const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        console.log(entry.isIntersecting);
         entry.target.classList.add("show");
         observer.unobserve(entry.target);
       }
     });
   },
   {
-    threshold: 0,
+    threshold: 0.1,
   },
 );
 
@@ -25,8 +26,9 @@ toggleMenu.addEventListener("click", () => {
 
 const md_query = window.matchMedia('(min-width: 768px)')
 
-md_query.addEventListener('change',() => {
+md_query.addEventListener('change',(e) => {
     if(e.matches){
+      console.log(e.matches)
         mobile_menu.classList.add("hidden")
     }
 })
