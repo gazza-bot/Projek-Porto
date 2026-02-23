@@ -57,7 +57,7 @@
 }
 
 .li-nav {
-  @apply font-poppins text-ecru-white-200 pl-2 pr-2 transition duration-300 ease-in-out hover:border-0 hover:bg-tussock-300 hover:text-ecru-white-50 rounded-3xl;
+  @apply relative font-poppins text-ecru-white-200 p-2 transition-all duration-300 ease-in-out  hover:text-ecru-white-200 after:absolute hover:after:bg-tussock-300 after:bottom-0 after:left-0 after:w-0 after:content-[''] after:h-0.5 hover:after:w-full after:transition-all after:duration-500;
 }
 
 .menu-mobile {
