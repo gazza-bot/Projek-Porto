@@ -21,14 +21,16 @@ const toggleMenu = document.getElementById("toggleMenu");
 const mobile_menu = document.getElementById("menuMobile");
 
 toggleMenu.addEventListener("click", () => {
-  mobile_menu.classList.toggle("hidden");
+  console.log("CLickeds");
+  mobile_menu.classList.toggle("menu-transition");
 });
 
-const md_query = window.matchMedia('(min-width: 768px)')
+const md_query = window.matchMedia("(min-width: 768px)");
 
-md_query.addEventListener('change',(e) => {
-    if(e.matches){
-      console.log(e.matches)
-        mobile_menu.classList.add("hidden")
-    }
-})
+md_query.addEventListener("change", (e) => {
+  if (e.matches) {
+    mobile_menu.classList.add("hidden");
+  } else {
+    mobile_menu.classList.remove("hidden");
+  }
+});
