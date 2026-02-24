@@ -1,3 +1,4 @@
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -21,15 +22,27 @@ const toggleMenu = document.getElementById("toggleMenu");
 const mobile_menu = document.getElementById("menuMobile");
 
 toggleMenu.addEventListener("click", () => {
-  console.log("CLickeds");
   mobile_menu.classList.toggle("menu-transition");
 });
+
+document.addEventListener("click", (e)=>{
+  if(!mobile_menu.contains(e.target) && !toggleMenu.contains(e.target)) {
+    mobile_menu.classList.remove("menu-transition")
+  }
+})
+
+document.querySelectorAll("#menuMobile a").forEach((link) =>{
+  link.addEventListener("click", ()=>{
+    mobile_menu.classList.remove("menu-transition")
+  })
+})
 
 const md_query = window.matchMedia("(min-width: 768px)");
 
 md_query.addEventListener("change", (e) => {
   if (e.matches) {
     mobile_menu.classList.add("hidden");
+    mobile_menu.classList.remove("menu-transition")
   } else {
     mobile_menu.classList.remove("hidden");
   }
