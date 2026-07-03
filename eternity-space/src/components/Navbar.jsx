@@ -1,35 +1,23 @@
 import { useState, useEffect, useRef } from "react";
 
-// const toggleMenu = document.getElementById("toggleMenu");
-// const mobile_menu = document.getElementById("menuMobile");
-
-// toggleMenu.addEventListener("click", () => {
-//   mobile_menu.classList.toggle("menu-transition");
-// });
-
-// document.addEventListener("click", (e) => {
-//   if (!mobile_menu.contains(e.target) && !toggleMenu.contains(e.target)) {
-//     mobile_menu.classList.remove("menu-transition");
-//   }
-// });
-
-// document.querySelectorAll("#menuMobile a").forEach((link) => {
-//   link.addEventListener("click", () => {
-//     mobile_menu.classList.remove("menu-transition");
-//   });
-// });
-
-// const md_query = window.matchMedia("(min-width: 768px)");
-
-// md_query.addEventListener("change", (e) => {
-//   if (e.matches) {
-//     mobile_menu.classList.add("hidden");
-//     mobile_menu.classList.remove("menu-transition");
-//   } else {
-//     mobile_menu.classList.remove("hidden");
-//   }
-// });
 export default function Navbar() {
+  const navList = [
+    {
+      id: 1,
+      nav_button: "Home",
+      nav_href: "hero"
+    },
+    {
+      id: 2,
+      nav_button: "Gallery",
+      nav_href: "Gallery"
+    },
+    {
+      id: 3,
+      nav_button: "Social Media",
+      nav_href: "footer"
+    }
+  ]
   // boolean untuk mengatur buka tutup menu
   const [isMenuOpen, setMenuOpen] = useState(false);
   // useref = cari penggunaannya apa
@@ -56,15 +44,15 @@ export default function Navbar() {
         setMenuOpen(false);
       }
     };
-    
+
     const mdQuery = window.matchMedia("(min-width: 768px)");
     // event listener
     document.addEventListener("mousedown", handleClickOutside);
     mdQuery.addEventListener("change", handleResizeWindow);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-      mdQuery.removeEventListener("change", handleResizeWindow)
-    }
+      document.removeEventListener("mousedown", handleClickOutside);
+      mdQuery.removeEventListener("change", handleResizeWindow);
+    };
   }, []);
 
   return (
@@ -79,25 +67,25 @@ export default function Navbar() {
         {/* <!-- bagian fitur - fitur navbar --> */}
         <div id="ul_nav" className="hidden md:block">
           <ul className="flex flex-row gap-20">
-            <li id="li_nav" className="">
-              <a className="li-nav" href="#hero">
-                Home
-              </a>
-            </li>
-            <li id="li_nav" className="">
-              <a className="li-nav" href="#Gallery">
-                Gallery
-              </a>
-            </li>
-            <li id="li_nav" className="">
-              <a className="li-nav" href="#footer">
-                Social Media
-              </a>
-            </li>
+            {navList.map((menu) => {
+              return (
+
+                <li key={menu.id} id="li_nav" className="">
+                <a className="li-nav" href={`#${menu.nav_href}`}>
+                  {menu.nav_button}
+                </a>
+              </li>
+              );
+            })}
           </ul>
         </div>
 
-        <button id="toggleMenu" className="block md:hidden" ref={buttonRef} onClick={() => setMenuOpen(!isMenuOpen)}>
+        <button
+          id="toggleMenu"
+          className="block md:hidden"
+          ref={buttonRef}
+          onClick={() => setMenuOpen(!isMenuOpen)}
+        >
           <svg
             className="text-tussock-400 size-10 icon flat-line"
             fill="currentColor"
@@ -118,27 +106,31 @@ export default function Navbar() {
         <ul
           id="menuMobile"
           ref={menuRef}
-          className={
-            `menu-mobile md:hidden ${isMenuOpen ? "menu-transition" : ""}`
-          }
+          className={`menu-mobile md:hidden ${isMenuOpen ? "menu-transition" : ""}`}
         >
           <li
             id=""
             className="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200 z-50"
           >
-            <a href="#hero" onClick={() => setMenuOpen(false)}>Home</a>
+            <a href="#hero" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
           </li>
           <li
             id=""
             className="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200 z-50"
           >
-            <a href="#Gallery" onClick={() => setMenuOpen(false)}>Gallery</a>
+            <a href="#Gallery" onClick={() => setMenuOpen(false)}>
+              Gallery
+            </a>
           </li>
           <li
             id=""
             className="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200 z-50"
           >
-            <a href="#footer" onClick={() => setMenuOpen(false)}>Social Media</a>
+            <a href="#footer" onClick={() => setMenuOpen(false)}>
+              Social Media
+            </a>
           </li>
         </ul>
       </div>
