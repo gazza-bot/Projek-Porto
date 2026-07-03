@@ -5,19 +5,20 @@ export default function Navbar() {
     {
       id: 1,
       nav_button: "Home",
-      nav_href: "hero"
+      nav_href: "hero",
     },
     {
       id: 2,
       nav_button: "Gallery",
-      nav_href: "Gallery"
+      nav_href: "Gallery",
     },
     {
       id: 3,
       nav_button: "Social Media",
-      nav_href: "footer"
-    }
-  ]
+      nav_href: "footer",
+    },
+  ];
+
   // boolean untuk mengatur buka tutup menu
   const [isMenuOpen, setMenuOpen] = useState(false);
   // useref = cari penggunaannya apa
@@ -69,12 +70,11 @@ export default function Navbar() {
           <ul className="flex flex-row gap-20">
             {navList.map((menu) => {
               return (
-
                 <li key={menu.id} id="li_nav" className="">
-                <a className="li-nav" href={`#${menu.nav_href}`}>
-                  {menu.nav_button}
-                </a>
-              </li>
+                  <a className="li-nav" href={`#${menu.nav_href}`}>
+                    {menu.nav_button}
+                  </a>
+                </li>
               );
             })}
           </ul>
@@ -108,30 +108,19 @@ export default function Navbar() {
           ref={menuRef}
           className={`menu-mobile md:hidden ${isMenuOpen ? "menu-transition" : ""}`}
         >
-          <li
-            id=""
-            className="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200 z-50"
-          >
-            <a href="#hero" onClick={() => setMenuOpen(false)}>
-              Home
-            </a>
-          </li>
-          <li
-            id=""
-            className="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200 z-50"
-          >
-            <a href="#Gallery" onClick={() => setMenuOpen(false)}>
-              Gallery
-            </a>
-          </li>
-          <li
-            id=""
-            className="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200 z-50"
-          >
-            <a href="#footer" onClick={() => setMenuOpen(false)}>
-              Social Media
-            </a>
-          </li>
+          {navList.map((menu) => {
+            return (
+              <li
+                key={menu.id}
+                id=""
+                className="hover:bg-tussock-400 px-3 py-3 font-poppins text-tussock-400 hover:text-ecru-white-200 z-50"
+              >
+                <a href={`#${menu.nav_href}`} onClick={() => setMenuOpen(false)}>
+                  {menu.nav_button}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </header>
