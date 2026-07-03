@@ -1,5 +1,5 @@
 import Navbar from "./Navbar.jsx";
-
+// TODO: Refactor Hero Section, Footer.
 export default function App() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -51,7 +51,7 @@ export default function App() {
           </p>
           <img
             className="size-48 sm:size-56 md:size-64"
-            src="assets/logo-angkatan.png"
+            src="/src/assets/logo-angkatan.png"
             alt=""
           />
           <h1 className="font-cinzel font-bold text-2xl md:text-5xl bg-linear-to-r from-tussock-300 via-tussock-200 to-tussock-300 bg-clip-text text-transparent text-shadow-1xs text-shadow-tussock-200 drop-shadow-black">
@@ -150,7 +150,7 @@ export default function App() {
         className="flex flex-col items-center justify-center h-max bg-linear-to-b from-shuttle-gray-800 from-80% to-shuttle-gray-900"
       >
         <div className="flex flex-col p-10 items-center">
-          <img className="size-72 " src="assets/logo-angkatan.png" alt="" />
+          <img className="size-72 " src="/src/assets/logo-angkatan.png" alt="" />
           <h1 className="footer-h1">ETERNITY GENERATION</h1>
           <h1 className="footer-h1">
             Enhancing National Integrity, Radiating Youthfulity
