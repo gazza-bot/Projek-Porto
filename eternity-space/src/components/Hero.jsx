@@ -1,3 +1,6 @@
+import { useMemo } from "react";
+
+
 const bgUrl = [
   {
     id: "bg_1",
@@ -33,9 +36,9 @@ const bgUrl = [
   },
 ];
 export default function Hero() {
-  const idxUrl = Array.from({ length: 12 }, () =>
-    Math.floor(Math.random() * 8),
-  );
+  const idxUrl = useMemo(() => {
+    return Array.from({ length: 12 }, () => Math.floor(Math.random() * 8));
+  }, []);
 
   return (
     <div
