@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const navList = [
@@ -60,7 +61,7 @@ export default function Navbar() {
     <header id="navbar" className="navbar">
       <nav className="flex flex-row justify-between h-16 items-center px-3">
         <div className="flex items items-center">
-          <img className="size-10" src="/src/assets/logo-angkatan.png" alt="" />
+          <Logo styleLogo={`size-12`} />
           <h1 className="text-[10px] md:text-[20px] font-cinzel text-ecru-white-200">
             <span className="text-tussock-400">Eternity</span> Generation
           </h1>

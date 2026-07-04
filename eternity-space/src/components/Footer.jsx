@@ -1,3 +1,5 @@
+import Logo from "./Logo"
+
 export default function Footer() {
     return (
         <section
@@ -5,7 +7,7 @@ export default function Footer() {
         className="flex flex-col items-center justify-center h-max bg-linear-to-b from-shuttle-gray-800 from-80% to-shuttle-gray-900"
       >
         <div className="flex flex-col p-10 items-center">
-          <img className="size-72 " src="/src/assets/logo-angkatan.png" alt="" />
+          <Logo styleLogo={`size-72`} />
           <h1 className="footer-h1">ETERNITY GENERATION</h1>
           <h1 className="footer-h1">
             Enhancing National Integrity, Radiating Youthfulity

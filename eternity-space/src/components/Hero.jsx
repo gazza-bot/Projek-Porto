@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import Logo from "./Logo";
 
 
 const bgUrl = [
@@ -58,11 +59,7 @@ export default function Hero() {
         <p className="text-xl md:text-2xl sm:text-3xl text-tussock-300 font-cinzel border border-white/10 rounded-full px-3 bg-shuttle-gray-500/50 backdrop-blur-lg">
           Class of 2025
         </p>
-        <img
-          className="size-48 sm:size-56 md:size-64"
-          src="/src/assets/logo-angkatan.png"
-          alt=""
-        />
+        <Logo styleLogo={`size-48 sm:size-56 md:size-64`} />
         <h1 className="font-cinzel font-bold text-2xl md:text-5xl bg-linear-to-r from-tussock-300 via-tussock-200 to-tussock-300 bg-clip-text text-transparent text-shadow-1xs text-shadow-tussock-200 drop-shadow-black">
           ETERNITY GENERATION
         </h1>
