@@ -8,20 +8,21 @@ export default function Footer() {
       >
         <div className="flex flex-col p-10 items-center">
           <Logo styleLogo={`size-72`} />
-          <h1 className="footer-h1">ETERNITY GENERATION</h1>
-          <h1 className="footer-h1">
+          <h2 className="footer-h1">ETERNITY GENERATION</h2>
+          <p className="footer-h1">
             Enhancing National Integrity, Radiating Youthfulity
-          </h1>
-          <p className="text-1xl text-tussock-300 opacity-50 font-lora font-light">
+          </p>
+          <p className="text-xl text-tussock-300 opacity-50 font-lora font-light">
             Est. MMXXV
           </p>
         </div>
-        <div className="flex flex-col p-10">
-          <h1 className="footer-h1">Get To Know Us!!!</h1>
+        <div className="flex flex-col p-10 items-center">
+          <h2 className="footer-h1">Get To Know Us!!!</h2>
           <div className="flex flex-row gap-15">
             <a
               className="svg-rounded"
               href="https://www.instagram.com/eternitygeneration_"
+              aria-label="Instagram"
             >
               <svg
                 className="svg-set"
@@ -35,7 +36,11 @@ export default function Footer() {
                 />
               </svg>
             </a>
-            <a className="svg-rounded" href="https://youtube.com/@mediasepuluh">
+            <a 
+              className="svg-rounded" 
+              href="https://youtube.com/@mediasepuluh"
+              aria-label="YouTube"
+            >
               <svg
                 className="svg-set jam jam-youtube"
                 fill="currentColor"

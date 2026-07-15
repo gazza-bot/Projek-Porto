@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import Gal1 from "/src/assets/gallery-assets/gal-1.webp";
 import Gal2 from "/src/assets/gallery-assets/gal-2.webp";
 import Gal3 from "/src/assets/gallery-assets/gal-3.webp";
@@ -65,10 +66,14 @@ const cardInfo = [
 function GalleryHeader() {
   return (
     <>
-      <h1 className="reveal font-gallery">Gallery</h1>
-      <p className="reveal font-popins font-medium pl-10 text-2xl text-ecru-white-200">
-        Living Up Our Memories
-      </p>
+      <Reveal>
+        <h2 className="font-gallery">Gallery</h2>
+      </Reveal>
+      <Reveal>
+        <p className="font-poppins font-medium pl-10 text-2xl text-ecru-white-200">
+          Living Up Our Memories
+        </p>
+      </Reveal>
     </>
   );
 }
@@ -80,7 +85,7 @@ function GalleryCard({ cardInfo }) {
       className="gallery-card group bg-cover bg-center aspect-square"
     >
       <div className="gallery-shadow"></div>
-      <h1 className="gallery-text">{cardInfo.desc}</h1>
+      <p className="gallery-text">{cardInfo.desc}</p>
     </div>
   );
 }
@@ -107,16 +112,17 @@ function FormImage() {
 export default function Gallery() {
   return (
     <section
-      id="Gallery"
+      id="gallery"
       className="gallery-bg relative h-max bg-linear-to-t from-shuttle-gray-700 from-80% via-shuttle-gray-600 via-90% to-shuttle-gray-500 to-95%"
     >
       <GalleryHeader />
-      <div className="reveal grid-gallery">
-        {cardInfo.map((card, num) => {
-          return <GalleryCard cardInfo={card} key={num} />;
-        })}
+      <Reveal className="grid-gallery">
+        {cardInfo.map((card) => (
+          <GalleryCard cardInfo={card} key={card.url} />
+        ))}
         <FormImage />
-      </div>
+      </Reveal>
     </section>
   );
 }
+
