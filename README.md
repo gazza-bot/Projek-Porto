@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./src/assets/logo-angkatan.png" alt="Eternity Generation Logo" width="150" />
+  <img src="./eternity-space/src/assets/logo-angkatan.png" alt="Eternity Generation Logo" width="150" />
   <h1>Eternity Space</h1>
   <p><em>Together, Forever, Wherever</em></p>
 
